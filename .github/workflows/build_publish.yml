@@ -1,14 +1,8 @@
 name: Build and Publish
 
 on:
-  push:
-    branches:
-      - 'main'
-    tags:
-      - 'v*'
-  pull_request:
-    branches:
-      - 'main' # Run on PRs targeting main branch
+  # automatic triggers removed 2026-10-30 to stop burning hosted-runner minutes; run manually
+  workflow_dispatch:
 
 jobs:
   build: # Renamed from 'publish' to 'build' since it's not always publishing
